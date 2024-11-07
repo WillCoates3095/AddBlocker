@@ -1,4 +1,5 @@
 import tkinter as tk
+from addblock import *
 
 def try_password(password, root):
     if password == "password":
@@ -11,7 +12,7 @@ def try_password(password, root):
 def home_screen(root):
     main_label = tk.Label(root, text="Welcome!", font=("Arial", 18))
     main_label.pack(padx=10, pady=10)
-    button = tk.Button(root, text="Start Addblock!", font=("Arial", 18))
+    button = tk.Button(root, text="Start Addblock!", font=("Arial", 18) ,command=lambda: remove_ads())
     button.pack(padx=10, pady=10)
 
 def clear_screen(root):
